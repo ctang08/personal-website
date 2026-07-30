@@ -176,7 +176,6 @@ export default function Home() {
           </div>
         </div>
       </article>
-      <p className="orbit-note" aria-hidden="true">MOVE YOUR CURSOR TO EXPLORE</p>
     </main>
   );
 }
