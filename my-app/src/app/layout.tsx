@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import { Newsreader } from "next/font/google";
 import "./globals.css";
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Christopher Tang",
   description:
-    "Designer and developer crafting thoughtful digital experiences.",
+    "CS and math at Stanford.",
 };
 
 export default function RootLayout({
@@ -13,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={newsreader.className}>
+      <body>{children}</body>
     </html>
   );
 }
